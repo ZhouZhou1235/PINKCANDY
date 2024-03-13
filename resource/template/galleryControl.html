@@ -1,0 +1,29 @@
+<div class="screen">
+    <div class="txtBox">
+        <h1>管理兽</h1>
+    </div>
+    <div class="formBox">
+        <form action="./running/control.php" method="post">
+            <input type="text" name="galleryId" placeholder="画廊ID">
+            <input type="text" name="title" placeholder="作品标题" value="无标题">
+            <textarea name="info" cols="30" rows="10" placeholder="作品说明">作品介绍或者说明</textarea>
+            <select name="type">
+                <option value="">作品类型</option>
+                <option value="1">原创</option>
+                <option value="2">二次创作</option>
+                <option value="3">改图</option>
+                <option value="4">转载</option>
+                <option value="5">照片</option>
+            </select>
+            <select name="visit">
+                <option value="">浏览分级</option>
+                <option value="1">安全</option>
+                <option value="2">幼兽不宜</option>
+                <option value="3">警告</option>
+                <option value="4">隐藏</option>
+            </select>
+            <input type="hidden" name="todo" value="1">
+            <button type="submit">管理兽修改</button>
+        </form>
+    </div>
+</div>

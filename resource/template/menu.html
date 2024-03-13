@@ -1,0 +1,75 @@
+<div id="menu">
+    <img src="./resource/img/logo.png" alt="logo">
+    <span>粉糖粒子</span>
+    <span id="menuSearch">
+        <input type="text" name="search" id="try" placeholder="标签搜索" onchange="getInput(this.value)">
+        <button type="submit" onclick="returnSearch()">搜索</button>
+    </span>
+</div>
+<div id="menuSide">
+    <ul>
+        <li><a href="./index.php"><img src="./resource/img/logo_small.png" alt="logo_small"></a></li>
+        <li><a href="./user.php"><img src="./resource/img/menu_user.png" alt="个兽空间"></a></li>
+        <li><a href="./star.php"><img src="./resource/img/menu_star.png" alt="我的收藏"></a></li>
+        <li><a href="./watch.php"><img src="./resource/img/menu_watch.png" alt="关注"></a></li>
+        <li><a href="./uploadGallery.php"><img src="./resource/img/menu_upload.png" alt="上传作品"></a></li>
+        <li><a href="./tags.php"><img src="./resource/img/menu_tags.png" alt="标签墙纸"></a></li>
+        <li><a href="./search.php"><img src="./resource/img/menu_search.png" alt="搜索"></a></li>
+        <li><a href="./board.php"><img src="./resource/img/menu_board.png" alt="留言板"></a></li>
+        <li><a href="./about.php"><img src="./resource/img/menu_about.png" alt="关于"></a></li>
+    </ul>
+</div>
+<div id="menuPhone">
+    <a href="./index.php"><img src="./resource/img/logo_small.png" alt="logo_small"></a>
+    <a href="./user.php"><img src="./resource/img/menu_user.png" alt="个兽空间"></a>
+    <a href="./star.php"><img src="./resource/img/menu_star.png" alt="我的收藏"></a>
+    <a href="./watch.php"><img src="./resource/img/menu_watch.png" alt="关注"></a>
+    <a href="./uploadGallery.php"><img src="./resource/img/menu_upload.png" alt="上传作品"></a>
+    <a href="./tags.php"><img src="./resource/img/menu_tags.png" alt="标签墙纸"></a>
+    <a href="./search.php"><img src="./resource/img/menu_search.png" alt="搜索"></a>
+    <a href="./board.php"><img src="./resource/img/menu_board.png" alt="留言板"></a>
+    <a href="./about.php"><img src="./resource/img/menu_about.png" alt="关于"></a>
+</div>
+<div class="screen">
+    <span id="showInput"><a href="https://beian.miit.gov.cn">黔ICP备2023015805号</a></span>
+    <span id="showTags">让世界变成毛绒绒的形状xwx</span>
+</div>
+<span id="search"></span>
+<script>
+    window.addEventListener("error",e=>{
+        console.log("ZZWW js load error");
+    });
+</script>
+<script>
+    function getInput(str){
+        document.getElementById("showInput").innerHTML=str;
+        var xmlhttp;
+        var preSearch = str;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("showTags").innerHTML=xmlhttp.responseText;
+            }
+        }
+        
+        xmlhttp.open("post","./running/send.php",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("preSearch="+preSearch);
+    }
+    function returnSearch(){
+        var xmlhttp;
+        var search = document.getElementById("try").value;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                document.getElementById("search").innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("post","./running/send.php",true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        let todo = 4;
+        let sendContent = "todo="+todo+"&"+"search="+search;
+        xmlhttp.send(sendContent);
+    }
+    window.onload=function(){}
+</script>

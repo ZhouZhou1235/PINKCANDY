@@ -1,0 +1,94 @@
+<div class="screen">
+    <div class="txtBox">
+        <h1>上传画廊</h1>
+    </div>
+    <div class="formBox">
+        <div class="side">
+            <form action="./running/upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" onchange="showPic()" id="file">
+                <input type="text" name="title" placeholder="作品标题" value="无标题">
+                <textarea name="info" cols="30" rows="10" placeholder="作品说明">作品介绍或者说明</textarea>
+                <select name="type">
+                    <option value="">作品类型</option>
+                    <option value="1">原创</option>
+                    <option value="2">二次创作</option>
+                    <option value="3">改图</option>
+                    <option value="4">转载</option>
+                    <option value="5">照片</option>
+                </select>
+                <select name="visit">
+                    <option value="">浏览分级</option>
+                    <option value="1">安全</option>
+                    <option value="2">幼兽不宜</option>
+                    <option value="3">警告</option>
+                </select>
+                <input type="hidden" name="todo" value="1">
+                <button type="submit">上传</button>
+            </form>
+        </div>
+        <div class="side">
+            <div class="showPic">
+                <img src="" id="show">
+            </div>    
+        </div>
+    </div>
+    <div class="txtBox">
+        <h1>使用说明</h1>
+        <h2>所有小兽都可以上传画廊，画廊一旦上传允许修改，一般情况不可以删除。</h2>
+        <p>
+            一个画廊至少包含的内容：图片文件（支持jpg jpeg png gif）、作品标题、作品类型、浏览分级<br>
+            作品类型<br>
+            1 原创 不借助任何已有版权形象，创造出来的作品。 例：兽设，原创漫画<br>
+            2 二次创作 使用了已存在的形象创作的作品 例：同人志，基于角色的再设计<br>
+            3 改图 修改图像的要素后再次发布 例：翻译，裁剪，标记文字，绘制新的细节<br>
+            4 转载 搬运他兽的作品 例：略<br>
+            5 照片 用相机拍摄的图像 例：兽装展示<br>
+            浏览分级<br>
+            1 安全 所有小兽皆宜的全年龄图像<br>
+            2 幼兽不宜 可能会对幼兽产生不当引导的图像<br>
+            &nbsp;&nbsp;常见涉及要素：<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;1 内容可疑，包含诱惑、性暗示<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;2 刻画动物乳头/人形乳头，或者其他非生殖器养育部位。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;3 强调后肢和臀部<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;4 胯部附近有轻微的特征描写<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;5 强烈的爱恋表达场景，例如舌吻、挑逗、爱抚等<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;6 描绘了内裤、胸罩、内衣及泳衣<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;7 暗示性玩具<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;8 描绘汗液和模糊的生殖器液<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;9 囚禁小兽，不致命的惩罚<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;......<br>
+            3 警告 精神冲击性强的图像<br>
+            &nbsp;&nbsp;常见涉及要素：<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;1 一定程度的血腥暴力，存在淤青、血迹、伤痕<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;2 恶趣味内容、恋物癖<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;3 消极以及负面情绪的内容<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;4 画面存在侮辱或者攻击性<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;5 可能造成惊吓的图像<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;6 危险的器具或者机器，例如枪支、匕首、切割台<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;7 暴露兽的骨骼（用于绘画教程的除外）<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;......<br>
+        </p>
+        <p style="color: red;">
+            存在以下要素的画廊是直接禁止发布的，如有发现将立即删除。<br>
+            1 直接暴露性器官，或者仅露出生殖器的一部分<br>
+            2 性交，或者性交的透视图像<br>
+            3 自慰图像<br>
+            4 精液、阴部分泌液、生殖器液<br>
+            5 详细刻画的肛门<br>
+            6 屠杀，断肢，骨折，放血，血肉模糊<br>
+            7 政治相关内容<br>
+            8 严重的暴力恐怖画面<br>
+            9 严重的抑郁，精神心理异常，猎奇怪异<br>
+            10 涉及商业性质的作品<br>
+            ......<br>
+        </p>
+    </div>
+</div>
+<script>
+    function showPic(){
+        var reads = new FileReader();
+        file = document.getElementById("file").files[0];
+        reads.readAsDataURL(file);
+        reads.onload=function(e){document.getElementById("show").src=this.result;}
+    }
+</script>

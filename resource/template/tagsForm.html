@@ -1,0 +1,29 @@
+<div class="screen">
+    <div class="txtBox">
+        <h1>标签墙纸</h1>
+    </div>
+    <div class="formBox">
+        <form action="./running/send.php" method="post">
+            <input type="text" name="galleryId" placeholder="画廊ID">
+            <input type="text" name="tags" placeholder="标签">
+            <input type="hidden" name="todo" value="3">
+            <button type="submit">贴标签</button>
+        </form>
+    </div>
+    <div class="formBox">
+        <form action="./running/delete.php" method="post">
+            <input type="text" name="galleryId" placeholder="画廊ID">
+            <input type="text" name="tags" placeholder="标签">
+            <input type="hidden" name="todo" value="4">
+            <button type="submit">撕标签</button>
+        </form>
+    </div>
+    <div class="txtBox">
+        <h1>使用说明</h1>
+        <h2>标签墙纸可以向画廊贴上或撕下标签，标签可以被搜索从而发现画廊。</h2>
+        <p>请指定画廊ID，然后下面输入要添加/撕下的标签，如有多个则用空格隔开。只可以对自己发布的画廊操作。</p>
+        <p>例：</p>
+        <p>画廊ID：1</p>
+        <p>标签：狗狗世界 犬科 粉糖粒子周周</p>
+    </div>
+</div>

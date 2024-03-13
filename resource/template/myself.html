@@ -1,0 +1,45 @@
+<div class="screen">
+    <div class="infoBox">
+        <h1><span id="name"></span></h1>
+        <h2><span id="more"></span></h2>
+        <p><span id="info"></span></p>
+        <p><span id="watch"></span></p>
+    </div>
+    <div class="formBox">
+        <div class="side">
+            <form action="./running/enter.php" method="post">
+                <input type="hidden" name="todo" value="3">
+                <button type="submit">注销</button>
+            </form>
+            <button><span id="edit"></span></button>
+        </div>
+        <div class="side">
+            <div class="formBox">
+                <form action="editGallery.php" method="post">
+                    <input type="text" name="galleryId" placeholder="画廊ID">
+                    <button type="submit">编辑画廊</button>
+                </form>
+            </div>
+            <button><a href="./editOther.php">编辑其它</a></button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = '<?php echo "$furryUser";?>';
+    txt = "./editUser.php?username="+username;
+    function add(){
+        var a = document.createElement("a");
+        var link = document.createTextNode("修改个兽信息");
+        a.appendChild(link);
+        a.href = txt;
+        document.getElementById("edit").appendChild(a);
+    }add();
+    var name = '<?php echo "$name";?>';
+    document.getElementById("name").innerHTML=name;
+    var info = '<?php echo "$info";?>';
+    document.getElementById("info").innerHTML=info;
+    var more = '<?php echo "$furryUser $sex $sort";?>';
+    document.getElementById("more").innerHTML=more;
+    var watch = '<?php echo "$outStr";?>';
+    document.getElementById("watch").innerHTML=watch;
+</script>

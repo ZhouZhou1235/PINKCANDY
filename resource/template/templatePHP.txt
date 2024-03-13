@@ -1,0 +1,15 @@
+<?php
+    include "";
+    $object = new object;
+?>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <?php ?>
+</head>
+<body>
+    <!-- ZZWW -->
+    <?php
+    ?>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<div class="screenFull">
+    <div class="formBox">
+        <h2>当前保存信息</h2>
+        <span id="furryUser"></span>    
+        <form action="./running/edit.php" method="post">
+            <input type="password" name="password" placeholder="重新设置密码">
+            <input type="text" name="name" placeholder="名称">
+            <input type="text" name="email" placeholder="邮箱">
+            <textarea name="info" cols="20" rows="2" placeholder="介绍"></textarea>
+            <select name="sex">
+                <option value="">性别</option>
+                <option value="雄">雄</option>
+                <option value="雌">雌</option>
+                <option value="未知">不想告诉</option>
+            </select>
+            <select name="sort">
+                <option value="">种族</option>
+                <option value="犬">犬</option>
+                <option value="猫">猫</option>
+                <option value="龙">龙</option>
+                <option value="狐">狐</option>
+            </select>
+            <input type="hidden" name="todo" value="1">
+            <button type="submit">修改</button>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    var furryUser = '<?php echo "[$name][$sex][$sort][$email] $info";?>';
+    document.getElementById("furryUser").innerHTML=furryUser;
+</script>

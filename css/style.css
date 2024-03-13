@@ -1,0 +1,458 @@
+/*
+ * ZZWW 样式表
+ * 版权所有 粉糖粒子周周
+ * zhouzhouwebworld.online
+ * copyright by pinkcandyzhou
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif, monospace;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    font-weight: normal;
+    background-image: linear-gradient(0deg, rgb(50,50,50), rgb(75,75,75));
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    color: whitesmoke;
+}
+
+a {
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 1s;
+}
+a:link {color:rgb(170,200,220);}
+a:visited {color:rgb(170,200,220);}
+a:hover {color:rgb(80,160,200);}
+a:active {color:rgb(80,160,200);}
+
+#menu {
+    width: 95%;
+    float: right;
+    position: relative;
+    text-align: left;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(70, 80, 100);
+    z-index: 5;
+    overflow: hidden;
+}
+#menu img {
+    height: 5em;
+    vertical-align: middle;
+}
+#menu span {
+    font-size: 3em;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#menuFull {
+    width: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(70, 80, 100);
+    z-index: 5;
+    overflow: hidden;
+}
+#menuFull img {
+    height: 5em;
+    vertical-align: middle;
+}
+#menuFull span {
+    font-size: 3em;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#menuPhone {
+    width: 100%;
+    float: right;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(70, 80, 100);
+    z-index: 5;
+    overflow: hidden;
+    white-space: nowrap;
+    visibility: hidden;
+}
+#menuPhone img {
+    height: 3em;
+    vertical-align: middle;
+}
+#menuPhone span {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#menuSide {
+    width: 5%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(70, 80, 100);
+    padding: 0.5em;
+    z-index: 4;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+#menuSide img {
+    width: 100%;
+    vertical-align: middle;
+}
+#menuSide span {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+#menuSide ul {
+    width: 100%;
+    position: relative;
+}
+#menuSide li {
+    width: 100%;
+    display: block;
+    padding: 0.5em 0em;
+}
+#menuSide a {
+    display: block;
+    font-weight: bold;
+}
+
+#menuSearch {
+    width: auto;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+}
+#menuSearch input,button{
+    font-size: 0.5em;
+    box-sizing: border-box;
+    padding: 0.3em;
+}
+
+.screen {
+    width: 95%;
+    position: relative;
+    float: right;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.screenFull {
+    width: 100%;
+    position: relative;
+    float: right;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.galleryBox {
+    width: 95%;
+    position: relative;
+    float: right;
+    font-size: 1.5em;
+    columns: 5;
+    column-gap: 0.5em;
+    box-sizing: border-box;
+}
+.galleryBox canvas {
+    width: 100%;
+}
+
+.formBox {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+}
+.formBox .side {
+    width: 50%;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+}
+
+.formBox input {
+    width: 75%;
+    display: block;
+    margin: 0.3em;
+    font-size: 0.75em;
+    box-sizing: border-box;
+    padding: 0.3em;
+}
+.formBox textarea {
+    width: 75%;
+    display: block;
+    margin: 0.3em;
+    font-size: 0.75em;
+    box-sizing: border-box;
+}
+.formBox button,select {
+    width: 50%;
+    display: block;
+    margin: 0.3em;
+    font-size: 0.75em;
+    box-sizing: border-box;
+}
+
+.showPic {
+    width: 100%;
+    max-height: 32em;
+    overflow-y: scroll;
+    margin: auto;
+    text-align: center;
+}
+.showPic img {
+    width: 90%;
+    margin: 0.3em;
+}
+
+.showGalleryIndex {
+    overflow: hidden;
+    break-inside: avoid;
+    text-align: left;
+}
+.showGalleryIndex h1 {
+    font-size: 1.4em;
+    color: rgb(100,150,200);
+    transition: background-color 1s;
+}
+.showGalleryIndex h1:hover {
+    background-color: rgba(100,150,200,0.25);
+}
+.showGalleryIndex h2 {
+    font-size: 1.2em;
+    color: rgb(50,100,150);
+    transition: background-color 1s;
+}
+.showGalleryIndex h2:hover {
+    background-color: rgba(50,100,150,0.25);
+}
+.showGalleryIndex p {
+    font-size: 1em;
+}
+.showGalleryIndex img {
+    width: 100%;
+}
+
+.showGallery {
+    overflow: hidden;
+    break-inside: avoid;
+    text-align: center;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+.showGallery .firstSide{
+    width: 50%;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+}
+.showGallery .secondSide{
+    width: 50%;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+}
+.showGallery img {
+    width: 90%;
+    margin: 0.3em;
+}
+
+.infoBox {
+    width: 90%;
+    font-size: 1.5em;
+    margin: auto;
+    padding: 0.3em;
+    box-sizing: border-box;
+    text-align: left;
+}
+.infoBox h1 {
+    font-size: 1.4em;
+    margin-left: 1em;
+    color: rgb(100,150,200);
+}
+.infoBox h2 {
+    font-size: 1.2em;
+    margin-left: 2em;
+    color: rgb(50,100,150);
+}
+.infoBox p {
+    font-size: 1em;
+    margin-left: 3em;
+}
+
+.txtBox {
+    width: 75%;
+    font-size: 1em;
+    font-weight: normal;
+    margin: auto;
+    text-align: left;
+}
+.txtBox h1 {
+    font-size: 1.4em;
+    margin-left: 1em;
+    color: rgb(100,150,200);
+}
+.txtBox h2 {
+    font-size: 1.2em;
+    margin-left: 2em;
+    color: rgb(50,100,150);
+}
+.txtBox p {
+    font-size: 1em;
+    margin-left: 3em;
+}
+
+.boardBox {
+    columns: 5;
+    column-gap: 0.5em;
+}
+.boardBox .txtBox {
+    width: 100%;
+    margin: 0;
+}
+
+#showInput,#showTags {
+    font-size: 1em;
+    font-weight: bolder;
+    color: pink;
+}
+
+#starFormBox {
+    width: 100%;
+}
+#starFormBox button {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: rgb(100,150,200);
+}
+
+@media screen and (max-width: 1200px){
+    #menu {width: 90%;}
+    #menuSide {width: 10%;}
+    .screen {width: 90%;}
+    .galleryBox {
+        width: 90%;
+        columns: 4;
+        column-gap: 0.5em;
+    }
+    .boardBox {
+        columns: 4;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #menu {width: 90%;}
+    #menuSide {width: 10%;}
+    .screen {width: 90%;}
+    .galleryBox {
+        width: 90%;
+        columns: 3;
+        column-gap: 0.5em;
+    }
+    .boardBox {
+        columns: 3;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #menu {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    #menuSide {visibility: hidden;}
+    .screen {width: 100%;}
+    .galleryBox {
+        width: 100%;
+        columns: 2;
+        column-gap: 0.5em;
+    }
+    .boardBox {
+        columns: 2;
+    }
+    * {font-size: 1em;}
+    .showGalleryIndex h1 {font-size: 1em;}
+    .showGalleryIndex h2,p {font-size: 0.8em;}
+    .infoBox h1 {font-size: 1em;}
+    .infoBox h2,p {font-size: 0.8em;}
+    .txtBox h1 {font-size: 1em;}
+    .txtBox h2,p {font-size: 0.8em;}
+    #menuPhone {
+        position: relative;
+        visibility: visible;
+    }
+    #menuSearch {
+        margin: auto;
+        position: relative;
+    }
+    .formBox .side {width: 100%;}
+    .showGallery .firstSide{width: 100%;}
+    .showGallery .secondSide{width: 100%;}
+}
+
+@media screen and (max-width: 600px){
+    #menu {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    #menuSide {visibility: hidden;}
+    .screen {width: 100%;}
+    .galleryBox {
+        width: 100%;
+        columns: 1;
+        column-gap: 0.5em;
+    }
+    .boardBox {
+        columns: 1;
+    }
+    * {font-size: 1em;}
+    .showGalleryIndex h1 {font-size: 1em;}
+    .showGalleryIndex h2,p {font-size: 0.8em;}
+    .infoBox h1 {font-size: 1em;}
+    .infoBox h2,p {font-size: 0.8em;}
+    .txtBox h1 {font-size: 1em;}
+    .txtBox h2,p {font-size: 0.8em;}
+    #menuPhone {
+        position: relative;
+        visibility: visible;
+    }
+    #menuSearch {
+        margin: auto;
+        position: relative;
+    }
+    .formBox .side {width: 100%;}
+    .showGallery .firstSide{width: 100%;}
+    .showGallery .secondSide{width: 100%;}
+}
